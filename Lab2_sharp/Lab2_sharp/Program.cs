@@ -171,6 +171,19 @@ namespace Lab2_sharp
             flarry[1] = new float[3];
             flarry[2] = new float[4];
 
+            // Random generation of numbers
+            Random rnd = new Random();
+            for (int i = 0; i < flarry.Length; i++)
+            {
+                for (int j = 0; j < flarry[i].Length; j++)
+                {
+                    // Same strings, but the second option is less dependent on the semantics of other languages.
+                    //flarry[i][j] = (float)(rnd.Next(-100, 100) + Math.Round(rnd.NextDouble(), 3));
+                    flarry[i][j] = Convert.ToSingle((rnd.Next(-100, 100) + Math.Round(rnd.NextDouble(), 3)));
+                }
+            }
+
+            // Manual input
             //Console.WriteLine("\nEnter the array elements: ");
             //for (int i = 0; i < flarry.Length; i++)
             //{
@@ -180,15 +193,16 @@ namespace Lab2_sharp
             //        flarry[i][j] = Single.Parse(Console.ReadLine());
             //    }
             //}
-            //Console.WriteLine("\nStepped array: ");
-            //for (int i = 0; i < flarry.Length; i++)
-            //{
-            //    for (int j = 0; j < flarry[i].Length; j++)
-            //    {
-            //        Console.Write(flarry[i][j] + "\t");
-            //    }
-            //    Console.WriteLine();
-            //}
+
+            Console.WriteLine("\nStepped array: ");
+            for (int i = 0; i < flarry.Length; i++)
+            {
+                for (int j = 0; j < flarry[i].Length; j++)
+                {
+                    Console.Write(flarry[i][j] + "\t");
+                }
+                Console.WriteLine();
+            }
 
             // 3d
             var somevar = new short[] { 99, 33, 13, 69, 29 };

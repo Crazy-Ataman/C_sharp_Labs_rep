@@ -147,7 +147,15 @@ namespace Lab3_sharp
         {   // Show all customers.
             Console.WriteLine(this.ToString());
         }
-        //Implement IComparable CompareTo method - provide default sort order.
+        // OrderBy - do the same thing (System.Linq). (2 way)
+        // Example
+        //using System.Linq;
+        // ...
+        //foreach (var customer in ClassName.OrderBy(x => x.Surname))
+        //{
+        //Console.Write($" {customer} ");
+        //}
+        // Implement IComparable CompareTo method - provide default sort order.
         int IComparable.CompareTo(object obj)
         {   // Compare one surname with another surname.
             Customer c = (Customer)obj;

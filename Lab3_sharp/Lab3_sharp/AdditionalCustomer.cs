@@ -4,7 +4,7 @@ namespace Lab3_sharp
 {
     public partial class Customer
     {
-        public void Show_count_of_cards()
+        public void ShowCountOfCards()
         {
             Console.WriteLine($"Current number of cards: {count_of_cards}");
         }

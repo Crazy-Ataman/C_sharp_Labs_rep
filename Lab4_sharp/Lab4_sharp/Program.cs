@@ -21,13 +21,13 @@ namespace Lab4_sharp
             };
             Console.WriteLine("List of owners: ");
             foreach (Set<string>.Owner owner in owners)
-                owner.Show_owner();
+                owner.ShowOwners();
             Console.Write("\n");
 
             // Initialize class Date.
             var current_date = new Set<string>.Date();
             Console.WriteLine("Current date: ");
-            current_date.Show_date();
+            current_date.ShowDate();
             Console.Write("\n");
 
             // Changing color of text in console.
@@ -38,7 +38,7 @@ namespace Lab4_sharp
             set1.Add("Good morning");
             set1.Add("Rock");
             Console.WriteLine("Items from set1: ");
-            set1.Show_set();
+            set1.ShowSet();
 
             var set2 = new Set<string>() { };
             set2.Add("Hell world");
@@ -46,10 +46,10 @@ namespace Lab4_sharp
             set2.Add("Good morning");
             set2.Add("Rock and pop");
             set2.Add("Everlasting evening");
-            string dash_50 = new String('-', 50);
+            string dash_50 = new('-', 50);
             Console.WriteLine(dash_50);
             Console.WriteLine("Items from set2: ");
-            set2.Show_set();
+            set2.ShowSet();
 
             var set3 = new Set<int>() { };
             set3.Add(99);
@@ -59,7 +59,7 @@ namespace Lab4_sharp
             set3.Add(15);
             Console.WriteLine(dash_50);
             Console.WriteLine("Items from set3: ");
-            set3.Show_set();
+            set3.ShowSet();
 
             var set4 = new Set<int>() { };
             set4.Add(99);
@@ -69,95 +69,87 @@ namespace Lab4_sharp
             set4.Add(15);
             Console.WriteLine(dash_50);
             Console.WriteLine("Items from set4: ");
-            set4.Show_set();
+            set4.ShowSet();
 
             // Remove => -(type of the item must be explicitly declared)
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(dash_50);
             Console.WriteLine("Remove item \"1\" from set1...");
-            set1 = set1 - "1";
+            set1 -= "1";
             Console.WriteLine("Items from set1: ");
-            set1.Show_set();
+            set1.ShowSet();
 
             // Intersection => *
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(dash_50);
             Console.WriteLine("Intersection set1 with set2...");
-            var combo_set = set1 * set2;
             Console.WriteLine("set1 * set2:");
-            combo_set.Show_set();
+            (set1 * set2).ShowSet();
 
             // Subset => >
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(dash_50);
-            bool check_sets = set1 > set2;
-            Console.WriteLine($"Subset: set1 > set2 => {check_sets}");
-            check_sets = set3 > set4;
-            Console.WriteLine($"Subset: set3 < set4 => {check_sets}");
+            Console.WriteLine($"Subset: set1 > set2 => {set1 > set2}");
+            Console.WriteLine($"Subset: set3 < set4 => {set3 > set4}");
             // Subset (inverse) => <
-            check_sets = set1 < set2;
-            Console.WriteLine($"Subset (inverse): set1 < set2 => {check_sets}");
-            check_sets = set3 < set4;
-            Console.WriteLine($"Subset (inverse): set3 > set4 => {check_sets}");
+            Console.WriteLine($"Subset (inverse): set1 < set2 => {set1 < set2}");
+            Console.WriteLine($"Subset (inverse): set3 > set4 => {set3 < set4}");
 
             // Difference => &
             Console.ForegroundColor = ConsoleColor.Magenta;
-            combo_set = set2 & set1;
             Console.WriteLine(dash_50);
             Console.WriteLine("Difference: set1 & set2:");
-            combo_set.Show_set();
+            (set2 & set1).ShowSet();
 
             // Number of items in set.
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.Write(dash_50+"\nNumber of items in set1: ");
             Console.WriteLine(StatisticOperation.Count_items_of_set(set1));
             Console.WriteLine("Items from set1: ");
-            set1.Show_set();
+            set1.ShowSet();
 
             // Difference between maximum and minimum string.
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.Write(dash_50 + "\nDifference between maximum and minimum string in set2: ");
             Console.WriteLine(StatisticOperation.Difference_max_and_min(set2));
             Console.WriteLine("Items from set2: ");
-            set2.Show_set();
+            set2.ShowSet();
 
             // Concat all strings.
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(dash_50 + "\nConcat all strings in set1: ");
             Console.WriteLine(StatisticOperation.Concat_all_strings(set1));
             Console.WriteLine("Items from set1: ");
-            set1.Show_set();
+            set1.ShowSet();
 
             // Adding dot at the end of string.
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(dash_50 + "\nOrigin set1: ");
-            set1.Show_set();
+            set1.ShowSet();
             Console.WriteLine("Adding dot at the end...");
-            set1.Dot_at_the_end(set1);
+            set1.DotAtTheEnd(set1);
             Console.WriteLine("Current set1:");
-            set1.Show_set();
+            set1.ShowSet();
 
             // Deleting items with 0 value (string).
             Console.ForegroundColor = ConsoleColor.Yellow;
-            set1.Add("");
-            set1.Add("null");
-            set1.Add("0");
+            set1.Add(null);
             Console.WriteLine(dash_50 + "\nOrigin set1: ");
-            set1.Show_set();
+            set1.ShowSet();
             Console.WriteLine("Deleting items with 0 values...");
-            set1.Deleting_null(set1);
+            set1.DeletingNull(set1);
             Console.WriteLine("Current set1:");
-            set1.Show_set();
+            set1.ShowSet();
 
             // Deleting items with 0 value (int).
             Console.ForegroundColor = ConsoleColor.White;
             set3.Add(0);
             Console.WriteLine(dash_50 + "\nOrigin set3: ");
-            set3.Show_set();
+            set3.ShowSet();
             Console.WriteLine("Deleting items with 0 values...");
-            set3.Deleting_null(set3);
+            set3.DeletingNull(set3);
             Console.WriteLine("Current set3:");
-            set3.Show_set();
+            set3.ShowSet();
         }
     }
 }

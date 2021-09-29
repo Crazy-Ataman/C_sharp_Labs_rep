@@ -50,13 +50,13 @@ namespace Lab3_sharp
             rybkin.Show();
             Console.Write("Amount enrollment: ");
             int enrollment = Int32.Parse(Console.ReadLine());
-            rybkin.Increase_balance(ref balance_rybkin, enrollment);
+            rybkin.IncreaseBalance(ref balance_rybkin, enrollment);
             rybkin.Balance = balance_rybkin;
             rybkin.Show();
             Console.WriteLine(dash_110);
             Console.Write("Amount withdraw: ");
             enrollment = Int32.Parse(Console.ReadLine());
-            rybkin.Decrease_balance(ref balance_rybkin, enrollment);
+            rybkin.DecreaseBalance(ref balance_rybkin, enrollment);
             rybkin.Balance = balance_rybkin;
             rybkin.Show();
             Console.WriteLine(dash_110);
@@ -64,13 +64,13 @@ namespace Lab3_sharp
             // Change customer's surname.
             string new_surname;
             //rybkin.Change_customer(out new_surname, "Griboedov"); // Function Change_customer is not static.
-            Customer.Change_customer(out new_surname, "Griboedov"); // Requires clarification if function Change_customer is static.
+            Customer.ChangeCustomer(out new_surname, "Griboedov"); // Requires clarification if function Change_customer is static.
             rybkin.Surname = new_surname;
             rybkin.Show();
             Console.WriteLine(dash_110);
 
             // Amount of cards.
-            rybkin.Show_count_of_cards();
+            rybkin.ShowCountOfCards();
 
             // Anonymous type.
             var anonim = new { Surname = "NO_INFO", Name = "Inkognito" };

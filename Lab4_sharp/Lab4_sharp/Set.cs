@@ -23,7 +23,7 @@ namespace Lab4_sharp
                 id = GetHashCode();
             }
             // Method
-            public void Show_owner()
+            public void ShowOwners()
             {   // Print id, name, organization.
                 Console.WriteLine(
                     $"ID: {id}\n" +
@@ -33,44 +33,25 @@ namespace Lab4_sharp
         }
         public class Date
         {
-            private DateTime time;
+            private readonly DateTime time;
             // Constructor
             public Date()
             {
                 time = DateTime.Now;
             }
             // Method
-            public void Show_date()
-            {   // Print the current date.
-                Console.WriteLine(time);
-            }
+            public void ShowDate() => Console.WriteLine(time);
         }
         // Constructor
-        public List<T> items = new List<T>();
+        public List<T> items = new();
         public int Count => items.Count;
-        public static void Null_control(ref Set<T> set1, ref Set<T> set2)
-        {   // Null control in sets.
-            if (set1 == null)
-            {
-                throw new ArgumentNullException(nameof(set1));
-            }
-            if (set2 == null)
-            {
-                throw new ArgumentNullException(nameof(set2));
-            }
-        }
-        public void Show_set()
+        public void ShowSet()
         {   // Show set items.
             foreach(var item in items)
                 Console.WriteLine(item);
         }
         public void Add(T item)
         {   // Add data to set.. 
-            // item == null => print that the item is null
-            if (item == null)
-            {   // nameof(operator) - the operator returns a string literal of the element passed to it. 
-                throw new ArgumentNullException(nameof(item));
-            }
             // A set can only contain unique elements, 
             // therefore, if the set already contains such a data element, then we do not add it. 
             if (!items.Contains(item))
@@ -78,33 +59,17 @@ namespace Lab4_sharp
                 items.Add(item);
             }
         }
-        public void Remove(T item)
-        {   // Remove an item from the set. 
-            // Control for null.
-            if (item == null)
-            {
-                throw new ArgumentNullException(nameof(item));
-            }
-            // If the collection doesn't contain the given element, then we cannot delete it. 
-            if (!items.Contains(item))
-            {
-                throw new KeyNotFoundException($"Element {item} not found in set.");
-            }
-            // Remove item from collection.
-            items.Remove(item);
-        }
+        public void Remove(T item) => items?.Remove(item);
         public static Set<T> Union(Set<T> set1, Set<T> set2)
         {   // Union of sets. 
-            // Control for null.
-            Null_control(ref set1, ref set2);
             var result_set = new Set<T>();
             var items_of_result_set = new List<T>();
-            if (set1.items != null && set1.items.Count > 0)
+            if (set1.items.Count > 0)
             {   // If the first input set contains data items => add them to the result set. 
                 // The list is a reference type => it is necessary not only to transfer data, but to create their duplicates. 
                 items_of_result_set.AddRange(new List<T>(set1.items));
             }
-            if (set2.items != null && set2.items.Count > 0)
+            if (set2.items.Count > 0)
             {   // If the second input set contains data items => add them to the result set. 
                 // The list is a reference type => it is necessary not only to transfer data, but to create their duplicates. 
                 items_of_result_set.AddRange(new List<T>(set2.items));
@@ -116,7 +81,6 @@ namespace Lab4_sharp
         }
         public static Set<T> Intersection(Set<T> set1, Set<T> set2)
         {   // Intersection of sets.
-            Null_control(ref set1, ref set2);
             var result_set = new Set<T>();
             if (set1.Count < set2.Count)
             {
@@ -142,7 +106,6 @@ namespace Lab4_sharp
         }
         public static Set<T> Difference(Set<T> set1, Set<T> set2)
         {   // Difference of sets.
-            Null_control(ref set1, ref set2);
             var result_set = new Set<T>();
             if (set1.Count < set2.Count)
             {
@@ -166,80 +129,43 @@ namespace Lab4_sharp
             }
             return result_set;
         }
+        // Subset.
+        // Loop through the elements of the first set.
+        // If all the elements of the first set are contained in the second => this is a subset.
+        // Return true, otherwise false.
         public static bool Subset(Set<T> set1, Set<T> set2)
-        {   // Subset.
-            Null_control(ref set1, ref set2);
-            // Loop through the elements of the first set.
-            // If all the elements of the first set are contained in the second => this is a subset.
-            // Return true, otherwise false.
-            bool result = set1.items.All(s => set2.items.Contains(s));
-            return result;
-        }
-        public void Dot_at_the_end(Set<string> set)
-        {   //Adding dot at the end of string.
-            if (set == null)
-            {
-                throw new ArgumentNullException(nameof(set));
-            }
+            => set1.items.All(s => set2.items.Contains(s));
+        public void DotAtTheEnd(Set<string> set)
+        {   // Adding dot at the end of string.
             for (int i = 0; i < set.Count; i++)
                 set.items[i] += ".";
         }
-        public void Deleting_null(Set<string> set)
-        {   // Deleting items with 0 value (string).
-            if (set == null)
-            {
-                throw new ArgumentNullException(nameof(set));
-            }
-            for (int i = 0; i < set.Count; i++)
-                if (set.items[i] == "0" || set.items[i] == null || set.items[i] == "null" || set.items[i] == "")
-                {   // Warning! When we remove item from set, set automatically shift all items.
-                    // Therefore we do i--.
-                    set.Remove(set.items[i]);
-                    i--;
-                }
-        }
-        public void Deleting_null(Set<int> set)
-        {   // Deleting items with 0 value (int).
-            if (set == null)
-            {
-                throw new ArgumentNullException(nameof(set));
-            }
-            for (int i = 0; i < set.Count; i++)
-                if (set.items[i] == 0)
-                {   // Warning! When we remove item from set, set automatically shift all items.
-                    // Therefore we do i--.
-                    set.Remove(set.items[i]);
-                    i--;
-                }
-        }
+        public void DeletingNull(Set<string> set) => set?.Remove(null);
+        public void DeletingNull(Set<int> set) => set?.Remove(0);
 
-        public IEnumerator<T> GetEnumerator()
-        {   // Return an enumerator that iterates over all the elements of the set. 
-            // Use the enumerator of the list of data items of the set. 
-            return items.GetEnumerator();
-        }
-        IEnumerator IEnumerable.GetEnumerator()
-        {   // The IEnumerator object used to traverse the collection. 
-            // Use the enumerator of the list of data items of the set. 
-            return items.GetEnumerator();
-        }
+        // Return an enumerator that iterates over all the elements of the set. 
+        // Use the enumerator of the list of data items of the set. 
+        public IEnumerator<T> GetEnumerator() => items.GetEnumerator();
+
+        // The IEnumerator object used to traverse the collection. 
+        // Use the enumerator of the list of data items of the set. 
+        IEnumerator IEnumerable.GetEnumerator() => items.GetEnumerator();
         // Overload of operators.
         public static Set<T> operator -(Set<T> set1, T item)
         {
-            set1.Remove(item);
+            set1?.Remove(item);
             return set1;
         }
-        public static Set<T> operator *(Set<T> set1, Set<T> set2) => Intersection(set1, set2);
+        public static Set<T> operator *(Set<T> set1, Set<T> set2) 
+            => Intersection(set1, set2);
+        // Subset (inverse).
+        // If all the elements of the second set are contained in the first => this is a subset.
+        // Return true, otherwise false.
         public static bool operator <(Set<T> set1, Set<T> set2)
-        {   // Subset (inverse).
-            Null_control(ref set1, ref set2);
-            // Loop through the elements of the second set.
-            // If all the elements of the second set are contained in the first => this is a subset.
-            // Return true, otherwise false.
-            bool result = set2.items.All(s => set1.items.Contains(s));
-            return result;
-        }
-        public static bool operator >(Set<T> set1, Set<T> set2) => Subset(set1, set2);
-        public static Set<T> operator &(Set<T> set1, Set<T> set2) => Difference(set1, set2);
+            => set2.items.All(s => set1.items.Contains(s));
+        public static bool operator >(Set<T> set1, Set<T> set2) 
+            => Subset(set1, set2);
+        public static Set<T> operator &(Set<T> set1, Set<T> set2) 
+            => Difference(set1, set2);
     }
 }

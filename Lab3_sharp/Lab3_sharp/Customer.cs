@@ -131,15 +131,15 @@ namespace Lab3_sharp
         }
 
         // Methods
-        public void Increase_balance(ref int balance_of_card, int enrollment)
+        public void IncreaseBalance(ref int balance_of_card, int enrollment)
         {   // Increase balance by enrollment.
             balance_of_card += enrollment;
         }
-        public void Decrease_balance(ref int balance_of_card, int enrollment)
+        public void DecreaseBalance(ref int balance_of_card, int enrollment)
         {   // Decrease balance by enrollment.
             balance_of_card -= enrollment;
         }
-        public static void Change_customer(out string new_surname_out, string new_surname)
+        public static void ChangeCustomer(out string new_surname_out, string new_surname)
         {   // Change customer's surname.
             new_surname_out = new_surname;
         }

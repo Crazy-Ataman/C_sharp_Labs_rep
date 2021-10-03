@@ -4,33 +4,25 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace Lab4_sharp
-{
+{ 
+    public class Owner
+    {
+        public readonly int id;
+        public string name;
+        public string organization;
+        // Constructor
+        public Owner(string name, string organization)
+        {
+            this.name = name;
+            this.organization = organization;
+            id = GetHashCode();
+        }
+    }
     // T - generic type parameter.
-    // <typeparam name="T"> The type of data stored in the set. 
+    // <typeparam name="T"> The type of data stored in the set.
     public class Set <T> : IEnumerable<T>
     {   // IEnumerable - requiere to realize functions public IEnumerator<T> GetEnumerator() and IEnumerator IEnumerable.GetEnumerator()
         // IEnumerable - also require System.Collections and System.Collections.Generic.
-        public class Owner
-        {
-            private readonly int id;
-            public string name;
-            public string organization;
-            // Constructor
-            public Owner(string name, string organization)
-            {
-                this.name = name;
-                this.organization = organization;
-                id = GetHashCode();
-            }
-            // Method
-            public void ShowOwners()
-            {   // Print id, name, organization.
-                Console.WriteLine(
-                    $"ID: {id}\n" +
-                    $"Name: {name}\n" +
-                    $"Organization: {organization}");
-            }
-        }
         public class Date
         {
             private readonly DateTime time;
@@ -42,6 +34,8 @@ namespace Lab4_sharp
             // Method
             public void ShowDate() => Console.WriteLine(time);
         }
+        // Initialize object Owner.
+        public Owner master = new ("Max", "BSTU");
         // Constructor
         public List<T> items = new();
         public int Count => items.Count;

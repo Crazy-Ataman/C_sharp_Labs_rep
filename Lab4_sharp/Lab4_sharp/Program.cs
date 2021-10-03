@@ -6,23 +6,12 @@ namespace Lab4_sharp
     {
         static void Main(string[] args)
         {
-            // Initialize class Owner.
-            // 1 way
-            //Set<string>.Owner[] owners = new Set<string>.Owner[3];
-            //owners[0] = new Set<string>.Owner("Max", "BSTU");
-            //owners[1] = new Set<string>.Owner("Alexander", "BSTU");
-            //owners[2] = new Set<string>.Owner("Artem", "BSTU");
-            // 2 way 
-            Set<string>.Owner[] owners = new Set<string>.Owner[3]
-            {
-                new Set<string>.Owner("Max", "BSTU"),
-                new Set<string>.Owner("Alexander", "BSTU"),
-                new Set<string>.Owner("Artem", "BSTU")
-            };
-            Console.WriteLine("List of owners: ");
-            foreach (Set<string>.Owner owner in owners)
-                owner.ShowOwners();
-            Console.Write("\n");
+            var owner_of_project = new Set<string>();
+            Console.WriteLine("Owner:");
+            Console.WriteLine(
+               $"ID: {owner_of_project.master.id}\n" +
+               $"Name: {owner_of_project.master.name}\n" +
+               $"Organization: {owner_of_project.master.organization}\n");
 
             // Initialize class Date.
             var current_date = new Set<string>.Date();

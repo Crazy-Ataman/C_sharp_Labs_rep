@@ -6,12 +6,23 @@ namespace Lab4_sharp
     {
         static void Main(string[] args)
         {
-            var owner_of_project = new Set<string>();
-            Console.WriteLine("Owner:");
-            Console.WriteLine(
-               $"ID: {owner_of_project.master.id}\n" +
-               $"Name: {owner_of_project.master.name}\n" +
-               $"Organization: {owner_of_project.master.organization}\n");
+            // Initialize class Owner.
+            // 1 way
+            //Set<string>.Owner[] owners = new Set<string>.Owner[3];
+            //owners[0] = new Set<string>.Owner("Max", "BSTU");
+            //owners[1] = new Set<string>.Owner("Alexander", "BSTU");
+            //owners[2] = new Set<string>.Owner("Artem", "BSTU");
+            // 2 way 
+            Set<string>.Owner[] owners = new Set<string>.Owner[3]
+            {
+                new Set<string>.Owner("Max", "BSTU"),
+                new Set<string>.Owner("Alexander", "BSTU"),
+                new Set<string>.Owner("Artem", "BSTU")
+            };
+            Console.WriteLine("List of owners: ");
+            foreach (Set<string>.Owner owner in owners)
+                owner.ShowOwners();
+            Console.Write("\n");
 
             // Initialize class Date.
             var current_date = new Set<string>.Date();
@@ -100,14 +111,14 @@ namespace Lab4_sharp
             // Difference between maximum and minimum string.
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.Write(dash_50 + "\nDifference between maximum and minimum string in set2: ");
-            Console.WriteLine(StatisticOperation.Difference_max_and_min(set2));
+            Console.WriteLine(set2.Difference_max_and_min());
             Console.WriteLine("Items from set2: ");
             set2.ShowSet();
 
             // Concat all strings.
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(dash_50 + "\nConcat all strings in set1: ");
-            Console.WriteLine(StatisticOperation.Concat_all_strings(set1));
+            Console.WriteLine(set1.Concat_all_strings());
             Console.WriteLine("Items from set1: ");
             set1.ShowSet();
 

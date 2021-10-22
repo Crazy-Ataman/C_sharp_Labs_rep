@@ -14,6 +14,7 @@ namespace Lab5_6_7_sharp
         public string ColorFl { get; set; }
 
         public int PriceFl { get; set; }
+
         public string Country { get; }
 
         protected Plants(string country) => Country = country;

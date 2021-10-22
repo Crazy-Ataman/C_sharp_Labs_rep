@@ -2,18 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Lab5_sharp
+namespace Lab5_6_7_sharp
 {
     internal class Printer 
     {
         public void IAmPrinting(Plants obj) =>
-            Console.WriteLine($"Type: {obj}");
+            Console.WriteLine($"{obj}");
     }
     internal abstract class Plants : IGrowing
     {
+        public string ColorFl { get; set; }
+
+        public int PriceFl { get; set; }
         public string Country { get; }
 
         protected Plants(string country) => Country = country;
+
+        public Plants() { }
 
         public virtual void Grow()
         {
@@ -50,35 +55,25 @@ namespace Lab5_sharp
             Console.WriteLine($"Bushes\nCountry: {Country}\nLength: {Length}m\n" +
                               $"Quantity: {Quantity}\n");
 
-        //public override string ToString() => $"Name: {GetType()}\nQuantity: {Quantity}\n";
+        public override string ToString() => $"Name: {GetType()}\nQuantity: {Quantity}\n";
     }
-    internal class Flower : Plants
+    internal partial class Flower : Plants
     { 
         public int Price { get; }
+
         public float Length { get; }
 
-        public enum Color
-        {
-            Red,
-            Blue,
-            Green,
-            Purple,
-            Yellow,
-            White
-        }
-
-        public Color ColorDef { get; }
-
         public Flower(string country,
-            int price,
-            float length,
-            Color color)
-        : base(country) 
+           int price,
+           float length,
+           Color color)
+        : base(country)
         {
             Price = price;
             Length = length;
             ColorDef = color;
         }
+
         public override void Grow()
         {
             Console.WriteLine($"I am a small flower with {ColorDef} petals, growing in height!");
@@ -135,15 +130,23 @@ namespace Lab5_sharp
     }
     internal class Cactus : Plants, IGrowing
     {
+        private float Length { get; }
+
         private bool IsEdible { get; }
+
         public Cactus(string country,
+           float length,
            bool IsEdible)
-        : base(country) => this.IsEdible = IsEdible;
+        : base(country)
+        {
+            Length = length;
+            this.IsEdible = IsEdible;
+        }
 
         public override void Grow()
         {
             Console.WriteLine($"I am a small cactus, growing in desert!");
-            //Console.WriteLine($"My height now is {Length}.");
+            Console.WriteLine($"My height now is {Length} m.");
             Console.WriteLine("I grew 2 mm!");
         }
 
@@ -165,9 +168,9 @@ namespace Lab5_sharp
             Height = height;
             Width = width;
         }
-        static internal void Cut() => Console.WriteLine("Cutting... Crght... Crght...");
-        //public override string ToString() => $"Name: {GetType()}\nCountry: {Country}\n" +
-        //    $"Height: {Height}mm\nWidth: {Width}mm\n";
+        internal void Cut() => Console.WriteLine("Cutting paper... Crght... Crght...");
+        public override string ToString() => $"Name: {GetType()}\nCountry: {Country}\n" +
+            $"Height: {Height}mm\nWidth: {Width}mm\n";
 
         public override void Print() =>
            Console.WriteLine($"Paper\nCountry: {Country}\n");

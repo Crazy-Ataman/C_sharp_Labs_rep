@@ -1,0 +1,3 @@
+Flower: 5, White
+Flower: 20, Purple
+Flower: 35, Red

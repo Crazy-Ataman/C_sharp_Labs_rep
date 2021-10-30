@@ -90,7 +90,6 @@ namespace Lab5_6_7_sharp
                 Flower flower = new Flower(50, "Red");
                 Flower flower1 = new Flower(20, "Green");
                 Flower flower2 = new Flower(30, "Blue");
-                Flower flower3 = new Flower(-10, "Blue");
                 Bouquete bouquete = new Bouquete();
                 bouquete.Add(flower);
                 bouquete.Add(flower1);
@@ -150,7 +149,11 @@ namespace Lab5_6_7_sharp
                 Console.WriteLine(ex);
                 Logger.WriteLog(ex);
             }
-
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                Logger.WriteLog(ex);
+            }
             finally
             {
                 Console.WriteLine("\nThe end.");

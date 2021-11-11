@@ -2,14 +2,14 @@
 
 namespace Lab11_sharp
 {
-    class Person
+    class Car
     {
-        public string Name { get; set; }
+        public string Automobile { get; set; }
         public Customer Customer { get; set; }
 
-        public Person(string Name, Customer Customer)
+        public Car(string Automobile, Customer Customer)
         {
-            this.Name = Name;
+            this.Automobile = Automobile;
             this.Customer = Customer;
         }
     }

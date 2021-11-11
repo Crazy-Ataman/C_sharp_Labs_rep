@@ -72,7 +72,7 @@ namespace Lab11_sharp
             customers.Add(new Customer(33_333_333, "Newell", "Gabe", "none", "New York", 3_333_333, 333_333_333));
             customers.Add(new Customer(12_457_090, "Rybkin", "Pavel", "none", "Paris", 2_043_129, 789));
             customers.Add(new Customer(33_333_333, "Pypkin", "Popa", "Popivich", "Africa", 1, 0));
-            customers.Add(new Customer(11_545_654, "Alice", "Gold", "none", "Monreal", 4_331_154, 1_000_000));
+            customers.Add(new Customer(11_545_654, "Gold", "Alice", "none", "Monreal", 4_331_154, 1_000_000));
             customers.Add(new Customer(4_666_513, "Kotova", "Kasya", "none", "Madrid", 1_747_923, 999));
             customers.Add(new Customer(8_525_009, "Brown", "Leva", "none", "Moskva", 4_636_176, 5000));
 
@@ -135,15 +135,15 @@ namespace Lab11_sharp
             }
             Console.WriteLine("*******************************************************************\n");
 
-            Person person_1 = new Person("Alexander", customers[0]);
-            Person person_2 = new Person("Elon", customers[2]);
-            Person person_3 = new Person("Alice", customers[7]);
-            Person person_4 = new Person("Maks", customers[1]);
-            List<Person> people = new List<Person>() { person_1, person_2, person_3, person_4 };
+            Car automobile_1 = new Car("Bently", customers[0]);
+            Car automobile_2 = new Car("Ford", customers[2]);
+            Car automobile_3 = new Car("Ferrari", customers[7]);
+            Car automobile_4 = new Car("Audi", customers[1]);
+            List<Car> people = new List<Car>() { automobile_1, automobile_2, automobile_3, automobile_4 };
             var last = people.Join(customers,
                 p => p.Customer,
                 c => c,
-                (p, c) => new { Name = p.Name, ID = c.id, Address = c.address }
+                (p, c) => new { Automobile = p.Automobile, Name = c.name, Address = c.address }
                 );
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("Join request\n");

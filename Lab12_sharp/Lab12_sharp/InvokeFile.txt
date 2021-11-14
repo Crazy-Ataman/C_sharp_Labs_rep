@@ -1,0 +1,3 @@
+DoSimpleClass
+Artem
+Rodion

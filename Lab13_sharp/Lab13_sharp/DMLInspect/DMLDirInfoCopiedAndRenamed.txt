@@ -1,0 +1,14 @@
+|Directories|
+bin
+DMLInspect
+obj
+
+|Files|
+DMLDirInfo.cs
+DMLDiskInfo.cs
+DMLFileInfo.cs
+DMLFileManager.cs
+DMLLog.cs
+DMLLogFile.txt
+Lab13_sharp.csproj
+Program.cs

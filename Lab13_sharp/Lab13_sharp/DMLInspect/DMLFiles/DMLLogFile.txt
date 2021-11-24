@@ -1,0 +1,213 @@
+24.11.2021 11:59:12
+DMLDiskInfo: C:\
+Retrieving free disk space information.
+
+24.11.2021 11:59:12
+DMLDiskInfo: C:\
+Retrieving disk format.
+
+24.11.2021 11:59:12
+DMLDiskInfo: C:\
+Retrieving disk information.
+
+24.11.2021 11:59:12
+DMLDiskInfo: D:\
+Retrieving disk information.
+
+24.11.2021 11:59:12
+DMLDiskInfo: E:\
+Retrieving disk information.
+
+24.11.2021 11:59:12
+DMLFileInfo: DMLLogFile.txt
+Retrieving full path to the file.
+
+24.11.2021 11:59:12
+DMLFileInfo: DMLLogFile.txt
+Retrieving basic information about file.
+
+24.11.2021 11:59:12
+DMLFileInfo: DMLLogFile.txt
+Retrieving file creation and changes.
+
+24.11.2021 11:59:12
+DMLDirInfo: ..\..\..\..\Lab13_sharp
+Retrieving counts of files in the directory.
+
+24.11.2021 11:59:12
+DMLDirInfo: ..\..\..\..\Lab13_sharp
+Retrieving times creation of files in the directory.
+
+24.11.2021 11:59:12
+DMLDirInfo: ..\..\..\..\Lab13_sharp
+Retrieving counts of subdirectories in the directory.
+
+24.11.2021 11:59:12
+DMLDirInfo: ..\..\..\..\Lab13_sharp
+Retrieving parent directory in the directory.
+
+24.11.2021 11:59:12
+DMLLog: DMLLogFile.txt
+Retrieving entries by a given date/day/word.
+
+24.11.2021 11:59:12
+DMLLog: DMLLogFile.txt
+Retrieving counts of lines in the file.
+24.11.2021 12:01:22
+DMLDiskInfo: C:\
+Retrieving free disk space information.
+
+24.11.2021 12:01:22
+DMLDiskInfo: C:\
+Retrieving disk format.
+
+24.11.2021 12:01:22
+DMLDiskInfo: C:\
+Retrieving disk information.
+
+24.11.2021 12:01:22
+DMLDiskInfo: D:\
+Retrieving disk information.
+
+24.11.2021 12:01:22
+DMLDiskInfo: E:\
+Retrieving disk information.
+
+24.11.2021 12:01:22
+DMLFileInfo: DMLLogFile.txt
+Retrieving full path to the file.
+
+24.11.2021 12:01:22
+DMLFileInfo: DMLLogFile.txt
+Retrieving basic information about file.
+
+24.11.2021 12:01:22
+DMLFileInfo: DMLLogFile.txt
+Retrieving file creation and changes.
+
+24.11.2021 12:01:22
+DMLDirInfo: ..\..\..\..\Lab13_sharp
+Retrieving counts of files in the directory.
+
+24.11.2021 12:01:22
+DMLDirInfo: ..\..\..\..\Lab13_sharp
+Retrieving times creation of files in the directory.
+
+24.11.2021 12:01:22
+DMLDirInfo: ..\..\..\..\Lab13_sharp
+Retrieving counts of subdirectories in the directory.
+
+24.11.2021 12:01:22
+DMLDirInfo: ..\..\..\..\Lab13_sharp
+Retrieving parent directory in the directory.
+
+24.11.2021 12:01:22
+DMLLog: DMLLogFile.txt
+Retrieving entries by a given date/day/word.
+
+24.11.2021 12:01:22
+DMLLog: DMLLogFile.txt
+Retrieving counts of lines in the file.
+24.11.2021 12:18:02
+DMLDiskInfo: C:\
+Retrieving free disk space information.
+
+24.11.2021 12:18:02
+DMLDiskInfo: C:\
+Retrieving disk format.
+
+24.11.2021 12:18:02
+DMLDiskInfo: C:\
+Retrieving disk information.
+
+24.11.2021 12:18:02
+DMLDiskInfo: D:\
+Retrieving disk information.
+
+24.11.2021 12:18:02
+DMLDiskInfo: E:\
+Retrieving disk information.
+
+24.11.2021 12:18:02
+DMLFileInfo: DMLLogFile.txt
+Retrieving full path to the file.
+
+24.11.2021 12:18:02
+DMLFileInfo: DMLLogFile.txt
+Retrieving basic information about file.
+
+24.11.2021 12:18:02
+DMLFileInfo: DMLLogFile.txt
+Retrieving file creation and changes.
+
+24.11.2021 12:18:02
+DMLDirInfo: ..\..\..\..\Lab13_sharp
+Retrieving counts of files in the directory.
+
+24.11.2021 12:18:02
+DMLDirInfo: ..\..\..\..\Lab13_sharp
+Retrieving times creation of files in the directory.
+
+24.11.2021 12:18:02
+DMLDirInfo: ..\..\..\..\Lab13_sharp
+Retrieving counts of subdirectories in the directory.
+
+24.11.2021 12:18:02
+DMLDirInfo: ..\..\..\..\Lab13_sharp
+Retrieving parent directory in the directory.
+
+24.11.2021 12:18:02
+DMLLog: DMLLogFile.txt
+Retrieving entries by a given date/day/word.
+
+24.11.2021 12:18:02
+DMLLog: DMLLogFile.txt
+Retrieving counts of lines in the file.
+24.11.2021 12:19:22
+DMLDiskInfo: C:\
+Retrieving free disk space information.
+
+24.11.2021 12:19:22
+DMLDiskInfo: C:\
+Retrieving disk format.
+
+24.11.2021 12:19:22
+DMLDiskInfo: C:\
+Retrieving disk information.
+
+24.11.2021 12:19:22
+DMLDiskInfo: D:\
+Retrieving disk information.
+
+24.11.2021 12:19:22
+DMLDiskInfo: E:\
+Retrieving disk information.
+
+24.11.2021 12:19:22
+DMLFileInfo: DMLLogFile.txt
+Retrieving full path to the file.
+
+24.11.2021 12:19:22
+DMLFileInfo: DMLLogFile.txt
+Retrieving basic information about file.
+
+24.11.2021 12:19:22
+DMLFileInfo: DMLLogFile.txt
+Retrieving file creation and changes.
+
+24.11.2021 12:19:22
+DMLDirInfo: ..\..\..\..\Lab13_sharp
+Retrieving counts of files in the directory.
+
+24.11.2021 12:19:22
+DMLDirInfo: ..\..\..\..\Lab13_sharp
+Retrieving times creation of files in the directory.
+
+24.11.2021 12:19:22
+DMLDirInfo: ..\..\..\..\Lab13_sharp
+Retrieving counts of subdirectories in the directory.
+
+24.11.2021 12:19:22
+DMLDirInfo: ..\..\..\..\Lab13_sharp
+Retrieving parent directory in the directory.
+

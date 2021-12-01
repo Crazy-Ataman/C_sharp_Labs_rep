@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<Plant xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Price>1</Price>
+  <Name>Marigold</Name>
+  <Length>0.25</Length>
+</Plant>

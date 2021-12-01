@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ArrayOfPlant xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Plant>
+    <Price>100</Price>
+    <Name>Rose</Name>
+    <Length>2.5</Length>
+  </Plant>
+  <Plant>
+    <Price>5</Price>
+    <Name>Chamomile</Name>
+    <Length>0.5</Length>
+  </Plant>
+  <Plant>
+    <Price>1</Price>
+    <Name>Marigold</Name>
+    <Length>0.25</Length>
+  </Plant>
+  <Plant>
+    <Price>9</Price>
+    <Name>Tulip</Name>
+    <Length>0.3</Length>
+  </Plant>
+</ArrayOfPlant>
